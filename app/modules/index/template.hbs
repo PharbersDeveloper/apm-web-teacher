@@ -1,0 +1,41 @@
+<div local-class="content-page">
+	<div local-class="content">
+		<div local-class="left">
+			<img src="" alt="">
+		</div>
+		<div local-class="right">
+			<div local-class="margin">
+				<div local-class="head">
+					{{!-- <p>{{t 'apm.sysName'}}</p> --}}
+					<p>ＳＹＳ ＮＡＭＥ</p>
+				</div>
+				<div local-class="con">
+					<div local-class="title">
+						{{!-- <p>{{t 'apm.index.slogan'}}</p> --}}
+						<p>slogan</p>
+					</div>
+					<div local-class="input-area">
+						<div local-class="userinfo">
+							<label local-class="label-title" for="useremail">账号</label>
+							{{input id="useremail" name="user-email" type="email" value=userEmail placeholder='请输入账号' required=true local-class="email"}}
+							<p local-class={{if emailHint.status 'hint' 'wrongText'}}>{{emailHint.text}}</p>
+						</div>
+						<div local-class="userinfo">
+							<label local-class="label-title" for="userpassword">密码</label>
+							{{input id="userpassword" type="password" value=userPassword placeholder='请输入密码' required=true local-class="password"}}
+							<p local-class={{if pwHint.status 'hint' 'wrongText'}}>{{pwHint.text}}</p>
+						</div>
+						<div class="text-center">
+							{{#bs-button type="submit" local-class="btn" disabled=shouldDisabled onClick=(action "submit")}}
+								登入
+							{{/bs-button}}
+						</div>
+						{{!-- </div> --}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{hint-modal hint=hint }}
+{{outlet}}
