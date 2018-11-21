@@ -2178,7 +2178,7 @@ broccoli-node-info@^1.1.0:
   resolved "https://registry.yarnpkg.com/broccoli-node-info/-/broccoli-node-info-1.1.0.tgz#3aa2e31e07e5bdb516dd25214f7c45ba1c459412"
   integrity sha1-OqLjHgflvbUW3SUhT3xFuhxFlBI=
 
-broccoli-persistent-filter@^1.1.6, broccoli-persistent-filter@^1.4.3:
+broccoli-persistent-filter@^1.0.3, broccoli-persistent-filter@^1.1.6, broccoli-persistent-filter@^1.4.3:
   version "1.4.6"
   resolved "https://registry.yarnpkg.com/broccoli-persistent-filter/-/broccoli-persistent-filter-1.4.6.tgz#80762d19000880a77da33c34373299c0f6a3e615"
   integrity sha512-0RejLwoC95kv4kta8KAa+FmECJCK78Qgm8SRDEK7YyU0N9Cx6KpY3UCDy9WELl3mCXLN8TokNxc7/hp3lL4lfw==
@@ -3501,6 +3501,17 @@ ember-cli-htmlbars-inline-precompile@^1.0.0:
     heimdalljs-logger "^0.1.9"
     silent-error "^1.1.0"
 
+ember-cli-htmlbars@^1.1.1:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-1.3.5.tgz#65be9678b274b5e7861d7f75c188780af7ef9d13"
+  integrity sha512-Qur/anb0Vk57qmIhGLkSzl8X1QIMoae6pLa14MRQ8+YD2N5fNs3qdhEFf0SDBquPOH1QxQtraiNQvji47QBJyg==
+  dependencies:
+    broccoli-persistent-filter "^1.0.3"
+    ember-cli-version-checker "^1.0.2"
+    hash-for-dep "^1.0.2"
+    json-stable-stringify "^1.0.0"
+    strip-bom "^2.0.0"
+
 ember-cli-htmlbars@^2.0.1, ember-cli-htmlbars@^2.0.3:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-2.0.5.tgz#b5a105429a6bce4f7c9c97b667e3b8926e31397f"
@@ -3520,6 +3531,11 @@ ember-cli-htmlbars@^3.0.0:
     hash-for-dep "^1.2.3"
     json-stable-stringify "^1.0.0"
     strip-bom "^3.0.0"
+
+ember-cli-import-polyfill@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-import-polyfill/-/ember-cli-import-polyfill-0.2.0.tgz#c1a08a8affb45c97b675926272fe78cf4ca166f2"
+  integrity sha1-waCKiv+0XJe2dZJicv54z0yhZvI=
 
 ember-cli-inject-live-reload@^1.4.1:
   version "1.10.2"
@@ -3543,6 +3559,22 @@ ember-cli-lodash-subset@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
   integrity sha1-IMtop5D+D94kiN39jvu332/nZvI=
+
+ember-cli-moment-shim@^3.6.0, ember-cli-moment-shim@^3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-moment-shim/-/ember-cli-moment-shim-3.7.1.tgz#3ad691c5027c1f38a4890fe47d74b5224cc98e32"
+  integrity sha512-U3HHuEU7sXQ78v25ifmIa9w4nQPQ7vK/LZ2bt18pN3aKNvIDYiLe/MDeXGmqfFIq3OfruKG+CF+7dOLqxuzSlQ==
+  dependencies:
+    broccoli-funnel "^2.0.0"
+    broccoli-merge-trees "^2.0.0"
+    broccoli-source "^1.1.0"
+    broccoli-stew "^1.5.0"
+    chalk "^1.1.3"
+    ember-cli-babel "^6.6.0"
+    ember-cli-import-polyfill "^0.2.0"
+    lodash.defaults "^4.2.0"
+    moment "^2.19.3"
+    moment-timezone "^0.5.13"
 
 ember-cli-node-assets@^0.2.2:
   version "0.2.2"
@@ -3650,6 +3682,13 @@ ember-cli-valid-component-name@^1.0.0:
   integrity sha1-cVUM44fgIzBl8wswsVEKot++h+8=
   dependencies:
     silent-error "^1.0.0"
+
+ember-cli-version-checker@^1.0.2:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/ember-cli-version-checker/-/ember-cli-version-checker-1.3.1.tgz#0bc2d134c830142da64bf9627a0eded10b61ae72"
+  integrity sha1-C8LRNMgwFC2mS/lieg7e0QthrnI=
+  dependencies:
+    semver "^5.3.0"
 
 ember-cli-version-checker@^2.0.0, ember-cli-version-checker@^2.1.0, ember-cli-version-checker@^2.1.1, ember-cli-version-checker@^2.1.2:
   version "2.1.2"
@@ -3914,6 +3953,18 @@ ember-maybe-in-element@^0.1.3:
   integrity sha512-cAiG6N9HwvoPsMIePgwECilPrKRrIdfKqx9g8qWHKPS4vwrgS2PTeLmOcJvVYbBTXkHaFZmecDRpf6xAj6zk7A==
   dependencies:
     ember-cli-babel "^6.11.0"
+
+ember-pikaday@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/ember-pikaday/-/ember-pikaday-2.3.0.tgz#0fd0e6ee23b2159f187740bdcf8c8836603d8754"
+  integrity sha512-uQeDJor77NTn9NSjWS61PruaitG+Z9nIeJ0RiNdNRUoTAsbl9cRDFOciQJzjsDBMCVHIQepx+nf6GdQSQxox6A==
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-htmlbars "^1.1.1"
+    ember-cli-moment-shim "^3.6.0"
+    ember-cli-node-assets "^0.2.2"
+    fastboot-transform "^0.1.1"
+    pikaday "^1.5.1"
 
 ember-popper@^0.9.0:
   version "0.9.2"
@@ -4581,7 +4632,7 @@ fast-sourcemap-concat@^1.4.0:
     source-map-url "^0.3.0"
     sourcemap-validator "^1.1.0"
 
-fastboot-transform@^0.1.0:
+fastboot-transform@^0.1.0, fastboot-transform@^0.1.1:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/fastboot-transform/-/fastboot-transform-0.1.3.tgz#7dea0b117594afd8772baa6c9b0919644e7f7dcd"
   integrity sha512-6otygPIJw1ARp1jJb+6KVO56iKBjhO+5x59RSC9qiZTbZRrv+HZAuP00KD3s+nWMvcFDemtdkugki9DNFTTwCQ==
@@ -6150,6 +6201,11 @@ lodash.debounce@^4.0.8:
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
+lodash.defaults@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
+  integrity sha1-0JF4cW/+pN3p5ft7N/bwgCJ0WAw=
+
 lodash.defaults@~2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-2.3.0.tgz#a832b001f138f3bb9721c2819a2a7cc5ae21ed25"
@@ -6691,6 +6747,18 @@ mktemp@~0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/mktemp/-/mktemp-0.4.0.tgz#6d0515611c8a8c84e484aa2000129b98e981ff0b"
   integrity sha1-bQUVYRyKjITkhKogABKbmOmB/ws=
+
+moment-timezone@^0.5.13:
+  version "0.5.23"
+  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.23.tgz#7cbb00db2c14c71b19303cb47b0fb0a6d8651463"
+  integrity sha512-WHFH85DkCfiNMDX5D3X7hpNH3/PUhjTGcD0U1SgfBGZxJ3qUmJh5FdvaFjcClxOvB3rzdfj4oRffbI38jEnC1w==
+  dependencies:
+    moment ">= 2.9.0"
+
+"moment@>= 2.9.0", moment@^2.19.3:
+  version "2.22.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
+  integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
 
 morgan@^1.8.1:
   version "1.9.1"
@@ -7338,6 +7406,11 @@ pify@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
   integrity sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
+
+pikaday@^1.5.1:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/pikaday/-/pikaday-1.8.0.tgz#ce930e257042e852e6aadee1115e01554b2d71c5"
+  integrity sha512-SgGxMYX0NHj9oQnMaSyAipr2gOrbB4Lfs/TJTb6H6hRHs39/5c5VZi73Q8hr53+vWjdn6HzkWcj8Vtl3c9ziaA==
 
 pinkie-promise@^2.0.0:
   version "2.0.1"

@@ -1,6 +1,4 @@
 @import 'bootstrap';
-$btn-color: #70B6BD;
-$default-radius: 3px;
 
 body,
 html {
@@ -11,15 +9,16 @@ html {
 		height: 100%;
 	}
 }
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
 	:global(.container) {
-		// padding: 0;
+		padding: 0 20px;
 		width: 1400px;
 		max-width: 1400px;
 	}
 }
 @media (max-width: 1000px) {
 	:global(.container) {
+		padding: 0 20px;
 		width: 960px;
 		min-width: 960px;
 	}

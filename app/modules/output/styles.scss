@@ -1,0 +1,102 @@
+button {
+	font-size: 14px;
+}
+
+.choose-date {
+	margin: 16px 0;
+	padding: 8px;
+	height: 56px;
+	background-color: #FFF;
+
+	&>span {
+		display: inline-block;
+		margin-right: 8px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 16px;
+		color: #485465;
+		letter-spacing: 0;
+	}
+
+	&>input {
+		padding: 0 10px;
+		width: 200px;
+		height: 40px;
+		border: 1px solid #999999;
+		border-radius: 4px;
+		font-size: 14px;
+		color: #A7A7A7;
+		letter-spacing: 1.69px;
+		background: #FFFFFF;
+
+	}
+
+	.btn-default {
+		width: 104px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 14px;
+		color: #FFFFFF;
+		letter-spacing: 1.69px;
+		text-align: center;
+		border: 0;
+		border-radius: 4px;
+		background-color: #5E81CF;
+	}
+
+	.btn-output {
+		float: right;
+
+	}
+}
+
+.total {
+	margin: 10px 0;
+	height: 20px;
+
+	span {
+		float: right;
+		font-size: 14px;
+		color: #A7A7A7;
+		letter-spacing: 1.69px;
+	}
+}
+
+.table-class {
+	background-color: #FFF;
+	font-size: 14px;
+	color: #485465;
+	letter-spacing: 0;
+	font-weight: 100;
+
+	tr {
+		height: 42px;
+		line-height: 42px;
+	}
+
+	thead {
+		tr {
+			th {
+				font-weight: normal;
+				font-size: 14px;
+				color: #485465;
+				letter-spacing: 0;
+			}
+		}
+	}
+
+	tbody {
+		tr:nth-of-type(odd) {
+			background-color: #E8E8E8;
+		}
+
+		tr {
+			font-weight: normal;
+			font-size: 14px;
+			color: #485465;
+			letter-spacing: 0;
+		}
+	}
+
+
+}

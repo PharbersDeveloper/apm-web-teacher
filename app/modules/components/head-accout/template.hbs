@@ -4,16 +4,13 @@
 		<p>SYS NAME</p>
 	</div>
 	<div local-class="account">
-		<div class="dropdown">
-			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
-			 aria-haspopup="true" aria-expanded="false">
-				{{data}}
-				<span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-				<li {{action 'exitSystem'}}>登出</li>
-				{{!-- <li role="separator" class="divider"></li> --}}
-			</ul>
-		</div>
+		{{#bs-dropdown as |dd|}}
+			{{#dd.button}}{{data}} <span class="caret"></span>{{/dd.button}}
+			{{#dd.menu as |menu|}}
+				{{#menu.item}}
+					<li {{action 'exitSystem'}}>登出</li>
+				{{/menu.item}}
+			{{/dd.menu}}
+		{{/bs-dropdown}}
 	</div>
 </div>

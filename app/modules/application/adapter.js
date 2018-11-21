@@ -3,7 +3,7 @@ import { inject } from '@ember/service';
 import rsvp from 'rsvp';
 
 export function invalidError(resolve, reject, data) {
-	if (data.errors !== undefined) {
+	if (typeof data.errors !== 'undefined') {
 		return reject(new DS.InvalidError(data.errors));
 	}
 	return resolve(data);

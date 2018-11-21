@@ -21,10 +21,15 @@ module.exports = function (environment) {
 		APP: {
 			// Here you can pass flags/options to your application instance
 			// when it is created
+		},
+		moment: {
+			// Options:
+			// 'all' - all years, all timezones
+			// 'subset' - subset of the timezone data to cover 2010-2020 (or 2012-2022 as of 0.5.12). all timezones.
+			// 'none' - no data, just timezone API
+			includeLocales: ['zh-cn'],
+			localeOutputPath: 'assets/moment-locales'
 		}
-	};
-	ENV.i18n = {
-		defaultLocale: 'zh'
 	};
 
 	if (environment === 'development') {

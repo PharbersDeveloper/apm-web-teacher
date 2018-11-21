@@ -1,2 +1,28 @@
-{{!-- {{outlet}} --}}
 {{head-accout data=userName exitSystem=(action 'exitSystem')}}
+<section class="container">
+	<section local-class="choose-date">
+		<span>选择时间</span>{{pikaday-input onSelection=(action 'doSomethingWithSelectedValue') format="YYYY/MM/DD" readonly="readonly" placeholder="年/月/日"}}
+		<button local-class="btn-default btn-check" {{action "checkData"}}>查询</button>
+		<button local-class="btn-default btn-output" {{action "outputData"}}>导出</button>
+	</section>
+	<p local-class="total"> <span>共{{total}}份</span> </p>
+	<table class="table table-striped" local-class="table-class">
+		<thead>
+			<tr>
+				<th scope="col">完成时间</th>
+				<th scope="col">学员名称</th>
+				<th scope="col">课程内容</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each model as |item|}}
+				<tr>
+					<td>{{item.time}}</td>
+					<td>{{item.name}}</td>
+					<td>{{item.class}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</section>
+{{hint-modal hint=hint confirm=(action "confirmOutputData")}}
