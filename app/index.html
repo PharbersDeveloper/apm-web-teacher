@@ -15,10 +15,8 @@
 
 <body>
 	{{content-for "body"}}
-	<!-- <script src="https://cdn.bootcss.com/babel-core/6.1.19/browser.js"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.9.1/polyfill.js"></script> -->
 	<!--兼容IE Promise的插件-->
-	<!-- <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6"></script> -->
+    <script type="text/javascript" src ="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6"></script>
 	<script src="{{rootURL}}assets/vendor.js"></script>
 	<script src="{{rootURL}}assets/apm-web-teacher.js"></script>
 	{{content-for "body-footer"}}
