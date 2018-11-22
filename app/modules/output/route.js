@@ -3,35 +3,29 @@ import Route from '@ember/routing/route';
 export default Route.extend({
 
 	model() {
-		let model = [
-			{
-				time: '2018-11-11',
-				name: '谢广坤',
-				class: 'APM区域计划课'
-			},
-			{
-				time: '2018-11-11',
-				name: '谢广坤',
-				class: 'APM区域计划课'
-			},
-			{
-				time: '2018-11-11',
-				name: '谢广坤',
-				class: 'APM区域计划课'
-			},
-			{
-				time: '2018-11-11',
-				name: '谢广坤',
-				class: 'APM区域计划课'
-			},
-			{
-				time: '2018-11-11',
-				name: '谢广坤',
-				class: 'APM区域计划课'
-			}
-		];
+		let req = {},
+			conditions = {};
 
-		this.controllerFor('output').set('total', model.length);
-		return model;
+		req = this.get('pmController').get('Store').createModel('request', {
+			id: 'checkData',
+			res: 'bind_teacher_student_time_paper'
+		});
+		req.get('eqcond').pushObject(this.get('pmController').get('Store').createModel('eqcond', {
+			id: 'eqcond01',
+			key: 'teacher_id',
+			val: 'teacherone'
+		}));
+		conditions = this.get('pmController').get('Store').object2JsonApi(req);
+
+		this.get('logger').log(conditions);
+		this.get('pmController').get('Store').queryMultipleObject('/api/v1/findBindTeacherStudentTimePaper/0', 'bind_teacher_student_time_paper', conditions)
+			.then((data) => {
+				this.get('logger').log(data);
+				this.controllerFor('output').set('totalNum', data.length);
+				this.controllerFor('output').set('total', data);
+				this.controllerFor('output').set('loadingState', false);
+
+
+			});
 	}
 });
