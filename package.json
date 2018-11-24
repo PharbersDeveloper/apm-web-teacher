@@ -54,7 +54,6 @@
 		"node": "6.* || 8.* || >= 10.*"
 	},
 	"dependencies": {
-		"ember-cookies": "^0.3.1",
 		"ember-auto-import": "^1.2.13",
 		"ember-cli-babel": "^7.1.2",
 		"ember-cli-moment-shim": "^3.7.1",
