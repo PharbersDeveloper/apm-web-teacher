@@ -24,8 +24,6 @@ export default Route.extend({
 				this.controllerFor('output').set('totalNum', data.length);
 				this.controllerFor('output').set('total', data);
 				this.controllerFor('output').set('loadingState', false);
-
-
 			});
 	}
 });
