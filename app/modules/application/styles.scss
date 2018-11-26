@@ -4,11 +4,13 @@ body,
 html {
 	height: 100%;
 	background: #efeff0;
-	font-family: "Microsoft Yahei","微软雅黑","宋体",Tahoma,Arial,Helvetica,STHeiti;
+	font-family: "Microsoft Yahei", "微软雅黑", "宋体", Tahoma, Arial, Helvetica, STHeiti;
+
 	&>:global(.ember-view) {
 		height: 100%;
 	}
 }
+
 @media (min-width: 1440px) {
 	:global(.container) {
 		padding: 0 20px;
@@ -16,6 +18,7 @@ html {
 		max-width: 1400px;
 	}
 }
+
 @media (max-width: 1000px) {
 	:global(.container) {
 		padding: 0 20px;
