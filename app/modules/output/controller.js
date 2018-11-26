@@ -5,8 +5,8 @@ import rsvp from 'rsvp';
 
 export default Controller.extend({
 	cookies: inject(),
-	file_operation: inject(),
-
+	// file_operation: inject(),
+	fileOperation: inject('file_operation'),
 	init() {
 		this._super(...arguments);
 		this.set('userName', localStorage.getItem('userName'));
@@ -61,9 +61,11 @@ export default Controller.extend({
 				this.get('pmController').get('Store').queryMultipleObject('/api/v1/findBindTeacherStudentTimePaper/0', 'bind_teacher_student_time_paper', conditions)
 					.then((data) => {
 						this.set('loadingState', false);
-						this.set('totalNum', data.length);
+						this.set('totalNum', data.get('length'));
 						this.set('total', data);
 					});
+			} else {
+				this.set('loadingState', false);
 			}
 		},
 		confirmOutputData() {
@@ -108,7 +110,7 @@ export default Controller.extend({
 
 			conditions = this.get('pmController').get('Store').object2JsonApi(req);
 
-			instance = this.get('file_operation').download('post', '/api/v1/downloadStudentReport/0', {
+			instance = this.get('fileOperation').download('post', '/api/v1/downloadStudentReport/0', {
 				condition: conditions
 			});
 
@@ -121,6 +123,7 @@ export default Controller.extend({
 		outputData() {
 			let hint = null,
 				dateRange = this.get('dateRange');
+
 
 			if (typeof dateRange !== 'undefined') {
 				hint = {
