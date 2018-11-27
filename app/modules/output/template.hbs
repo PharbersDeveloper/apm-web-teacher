@@ -5,7 +5,9 @@
 		<button local-class="btn-default btn-check" {{action "checkData"}}>查询</button>
 		<button local-class="btn-default btn-output" {{action "outputData"}}>导出</button>
 	</section>
-	<p local-class="total"> <span>共{{totalNum}}份</span> </p>
+	<p local-class="total">
+		<span>当前选择日期：{{data-format currentDate}}</span>
+		<span>共{{totalNum}}份</span> </p>
 	<table class="table table-striped" local-class="table-class">
 		<thead>
 			<tr>

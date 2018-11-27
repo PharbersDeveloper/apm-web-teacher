@@ -54,7 +54,13 @@ button {
 	margin: 10px 0;
 	height: 20px;
 
-	span {
+	span:first-child {
+		font-size: 14px;
+		color: #A7A7A7;
+		letter-spacing: 1.69px;
+	}
+
+	span:last-child {
 		float: right;
 		font-size: 14px;
 		color: #A7A7A7;
