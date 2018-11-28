@@ -163,7 +163,7 @@ export default Controller.extend({
 				hintModal: true,
 				hintImg: true,
 				title: '提示',
-				content: '确认导出时间节点为</br>' + currentDate + '</br>的学员填写数据吗？',
+				content: '确认导出时间节点为 ' + currentDate + ' 的学员填写数据吗？',
 				hintBtn: true
 			};
 			this.set('hint', hint);
