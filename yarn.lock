@@ -1099,6 +1099,14 @@ atob@^2.1.1:
   resolved "https://registry.npmjs.org/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
+axios@^0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
+  integrity sha1-MtU+SFHv3AoRmTts0AB4nXDAUQI=
+  dependencies:
+    follow-redirects "^1.3.0"
+    is-buffer "^1.1.5"
+
 babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
   version "6.26.0"
   resolved "https://registry.npmjs.org/babel-code-frame/-/babel-code-frame-6.26.0.tgz#63fd43f7dc1e3bb7ce35947db8fe369a3f58c74b"
@@ -4903,7 +4911,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
 
-follow-redirects@^1.0.0:
+follow-redirects@^1.0.0, follow-redirects@^1.3.0:
   version "1.5.10"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
   integrity sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
@@ -7492,6 +7500,16 @@ pharbers-ember-event-handle@latest:
   resolved "https://registry.npmjs.org/pharbers-ember-event-handle/-/pharbers-ember-event-handle-1.0.0.tgz#2c0670335b0a8b67f92f6ee5e27d8ace1d430df9"
   integrity sha512-6C7KYbxEqvbDnm9sEtc79IQd9lWZbZLXDO/NLFB0tHic+KvlzdbDeaNasKFZCDsGu97xDNHzn7nByZvTiRq9hw==
   dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-htmlbars "^2.0.1"
+
+pharbers-ember-file-operation@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/pharbers-ember-file-operation/-/pharbers-ember-file-operation-1.0.0.tgz#ea80b99269b113a01af3bdc8b3f4f0398bb76296"
+  integrity sha512-qn08C5dI9Vh4KHXi3nX/xtz4qMet/iriplX5PALaqrhEJgv8UuinjDo3BrfPE0lX79IgmdqRv15UWPf89ApyrQ==
+  dependencies:
+    axios "^0.18.0"
+    ember-auto-import "^1.2.13"
     ember-cli-babel "^6.6.0"
     ember-cli-htmlbars "^2.0.1"
 

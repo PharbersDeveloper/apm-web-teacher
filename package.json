@@ -17,18 +17,12 @@
 		"test": "ember test"
 	},
 	"devDependencies": {
-		"sass": "^1.15.1",
 		"bootstrap": "^4.1.3",
 		"bootstrap-sass": "^3.3.7",
-		"ember-cli-sass": "^8.0.1",
-		"ember-css-modules": "^1.0.3",
-		"ember-css-modules-sass": "^1.0.1",
-		"ember-auto-import": "^1.2.15",
-		"ember-bootstrap": "^2.3.0",
-		"ember-pikaday": "^2.3.0",
-
 		"broccoli-asset-rev": "^2.4.5",
 		"ember-ajax": "^3.0.0",
+		"ember-auto-import": "^1.2.15",
+		"ember-bootstrap": "^2.3.0",
 		"ember-cli": "~2.18.2",
 		"ember-cli-app-version": "^3.0.0",
 		"ember-cli-babel": "^7.1.2",
@@ -38,17 +32,22 @@
 		"ember-cli-htmlbars-inline-precompile": "^1.0.0",
 		"ember-cli-inject-live-reload": "^1.4.1",
 		"ember-cli-qunit": "^4.1.1",
+		"ember-cli-sass": "^8.0.1",
 		"ember-cli-shims": "^1.2.0",
 		"ember-cli-sri": "^2.1.0",
 		"ember-cli-uglify": "^2.0.0",
+		"ember-css-modules": "^1.0.3",
+		"ember-css-modules-sass": "^1.0.1",
 		"ember-data": "~2.18.0",
 		"ember-export-application-global": "^2.0.0",
 		"ember-load-initializers": "^1.0.0",
+		"ember-pikaday": "^2.3.0",
 		"ember-resolver": "^4.0.0",
 		"ember-source": "~2.18.0",
 		"eslint-plugin-ember": "^5.0.0",
 		"eslint-plugin-node": "^5.2.1",
-		"loader.js": "^4.2.3"
+		"loader.js": "^4.2.3",
+		"sass": "^1.15.1"
 	},
 	"engines": {
 		"node": "6.* || 8.* || >= 10.*"
@@ -57,8 +56,8 @@
 		"ember-auto-import": "^1.2.13",
 		"ember-cli-babel": "^7.1.2",
 		"ember-cli-moment-shim": "^3.7.1",
-		"pharbers-emberbasis-library": "^1.0.9",
 		"ember-i18n": "^5.3.0",
-		"pharbers-ember-file-operation": "*"
+		"pharbers-ember-file-operation": "^1.0.0",
+		"pharbers-emberbasis-library": "^1.0.9"
 	}
 }
