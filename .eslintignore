@@ -17,3 +17,13 @@
 
 # ember test
 /tests
+
+# model 
+/app/modules/auth/
+/app/modules/student/
+/app/modules/user/
+/app/modules/bind-teacher-student-time-paper
+
+# tool.js
+/app/modules/phtool/
+

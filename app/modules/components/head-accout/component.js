@@ -9,6 +9,7 @@ export default Component.extend({
 
 		},
 		exitSystem() {
+			// eslint-disable-next-line ember/closure-actions
 			this.sendAction('exitSystem');
 		}
 	}

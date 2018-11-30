@@ -1,3 +1,4 @@
+/* eslint-disable new-cap */
 import Controller from '@ember/controller';
 import { inject } from '@ember/service';
 import { A } from '@ember/array';
