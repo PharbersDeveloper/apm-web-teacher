@@ -1,5 +1,5 @@
 {{head-accout data=userName exitSystem=(action 'exitSystem')}}
-<section class="container">
+<section class="container" local-class="data-container">
 	<section local-class="choose-date">
 		<span>选择时间</span>{{pikaday-input onSelection=(action 'doSomethingWithSelectedValue') format="YYYY/MM/DD" readonly="readonly" placeholder="年/月/日"}}
 		<button local-class="btn-default btn-check" {{action "checkData"}}>查询</button>
