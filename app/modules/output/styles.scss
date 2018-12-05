@@ -96,6 +96,8 @@ button {
 	}
 
 	tbody {
+		position: relative;
+
 		tr:nth-of-type(odd) {
 			background-color: #E8E8E8;
 		}
