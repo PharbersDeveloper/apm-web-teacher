@@ -15,6 +15,7 @@ export default Controller.extend({
 		this.set('loadingState', true);
 		this.set('currentDate', '全部');
 		this.set('chooseDate', '全部');
+		this.set('_cookies', this.get('cookies').read('token'));
 	},
 	actions: {
 		doSomethingWithSelectedValue(value) {
@@ -143,7 +144,8 @@ export default Controller.extend({
 			conditions = this.get('pmController').get('Store').object2JsonApi(req);
 
 			instance = this.get('fileOperation').download('post', '/api/v1/downloadStudentReport/0', {
-				condition: conditions
+				condition: conditions,
+				headers: { 'Authorization': 'bearer ' + this.get('_cookies') }
 			});
 
 			instance.then(func => {

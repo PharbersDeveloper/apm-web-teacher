@@ -7531,10 +7531,10 @@ pharbers-ember-event-handle@latest:
     ember-cli-babel "^6.6.0"
     ember-cli-htmlbars "^2.0.1"
 
-pharbers-ember-file-operation@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/pharbers-ember-file-operation/-/pharbers-ember-file-operation-1.0.0.tgz#ea80b99269b113a01af3bdc8b3f4f0398bb76296"
-  integrity sha512-qn08C5dI9Vh4KHXi3nX/xtz4qMet/iriplX5PALaqrhEJgv8UuinjDo3BrfPE0lX79IgmdqRv15UWPf89ApyrQ==
+pharbers-ember-file-operation@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/pharbers-ember-file-operation/-/pharbers-ember-file-operation-1.0.1.tgz#af55938e18910c45f0c10da2d41d8ec236276022"
+  integrity sha512-I8iEfgYwzVp3VP6MmnL8rhITRF+X6DNwPhPipUajWkg0XWsfbzmPhuBXzDmaDkj4NvuBPa+Lg7SwBHIYgCOrYQ==
   dependencies:
     axios "^0.18.0"
     ember-auto-import "^1.2.13"

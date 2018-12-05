@@ -19,14 +19,14 @@ export default Controller.extend({
 		let pw = this.get('userPassword');
 
 		switch (true) {
-		case pw.length === 0:
-			return { text: '', status: false };
+			case pw.length === 0:
+				return { text: '', status: false };
 
-		case pw.length < 6 || pw.length > 18:
-			return { text: '*登录密码需为6～18位.', status: false };
+			case pw.length < 6 || pw.length > 18:
+				return { text: '*登录密码需为6～18位.', status: false };
 
-		default:
-			return { text: '', status: true };
+			default:
+				return { text: '', status: true };
 		}
 	}),
 	shouldDisabled: computed('emailHint', 'pwHint', function () {
@@ -52,7 +52,7 @@ export default Controller.extend({
 			eqValues = [
 				{ id: '1', type: 'eqcond', key: 'email', val: this.get('userEmail') },
 				{ id: '2', type: 'eqcond', key: 'password', val: privatePw },
-				{ id: '3', type: 'eqcond', key: 'login_source', val: 'APM' }
+				{ id: '3', type: 'eqcond', key: 'login_source', val: 'APM_T' }
 			];
 			eqValues.forEach((elem) => {
 				req.get(elem.type).pushObject(this.store.createRecord(elem.type, {
