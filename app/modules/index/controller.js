@@ -66,7 +66,8 @@ export default Controller.extend({
 
 			this.get('pmController').get('Store').queryObject('/api/v1/login/0', 'auth', conditions)
 				.then(data => {
-					this.get('cookie').write('token', data.get('token'), { path: '/', maxAge: data.get('token_expire') });
+					this.get('cookie').write('token-t', data.get('token'), { path: '/', maxAge: data.get('token_expire') });
+					this.store.adapterFor('application').headers.Authorization = `bearer ${data.get('token')}`;
 					localStorage.setItem('userName', data.get('user').get('user_name'));
 					localStorage.setItem('userPhone', data.get('user').get('user_phone'));
 					localStorage.setItem('userEmail', data.get('user').get('email'));

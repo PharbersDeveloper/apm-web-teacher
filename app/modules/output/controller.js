@@ -15,7 +15,7 @@ export default Controller.extend({
 		this.set('loadingState', true);
 		this.set('currentDate', '全部');
 		this.set('chooseDate', '全部');
-		this.set('_cookies', this.get('cookies').read('token'));
+		this.set('_cookies', this.get('cookies').read('token-t'));
 	},
 	actions: {
 		doSomethingWithSelectedValue(value) {
@@ -207,7 +207,7 @@ export default Controller.extend({
 		},
 		exitSystem() {
 			new rsvp.Promise((resolve) => {
-				this.get('cookies').clear('token', {
+				this.get('cookies').clear('token-t', {
 					path: '/'
 				});
 				localStorage.clear();
