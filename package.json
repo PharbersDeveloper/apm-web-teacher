@@ -56,6 +56,6 @@
 	"dependencies": {
 		"ember-cookies": "^0.3.1",
 		"pharbers-ember-file-operation": "^1.0.1",
-		"pharbers-emberbasis-library": "^1.0.9"
+		"pharbers-emberbasis-library": "^1.1.0"
 	}
 }
