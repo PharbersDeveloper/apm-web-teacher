@@ -19,16 +19,17 @@ export default Controller.extend({
 		let pw = this.get('userPassword');
 
 		switch (true) {
-			case pw.length === 0:
-				return { text: '', status: false };
+		case pw.length === 0:
+			return { text: '', status: false };
 
-			case pw.length < 6 || pw.length > 18:
-				return { text: '*登录密码需为6～18位.', status: false };
+		case pw.length < 6 || pw.length > 18:
+			return { text: '*登录密码需为6～18位.', status: false };
 
-			default:
-				return { text: '', status: true };
+		default:
+			return { text: '', status: true };
 		}
 	}),
+
 	shouldDisabled: computed('emailHint', 'pwHint', function () {
 		let status = [this.get('emailHint').status, this.get('pwHint').status],
 			allIsOk = '';
