@@ -41,7 +41,7 @@ export default Controller.extend({
 	}),
 	actions: {
 		submit() {
-			let PublicKey = `MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALnqzgYjJxtX0UBt6rZ1jT3hPh4M7rX7nx5ODvGd//s7C6Vo23OCWW0K13gmKnBkOEt6A2r+Oski17tDllZuC0ECAwEAAQ==`,
+			let PublicKey = this.get('publicKey'),
 				RSA = this.get('pmController').get('RSA'),
 				req = this.store.createRecord('request', { id: '0', res: 'user' }),
 				privatePw = '',

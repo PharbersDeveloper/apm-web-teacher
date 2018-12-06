@@ -71,8 +71,44 @@ export default Controller.extend({
 				this.get('pmController').get('Store').queryMultipleObject('/api/v1/findBindTeacherStudentTimePaper/0', 'bind_teacher_student_time_paper', conditions)
 					.then((data) => {
 						this.set('loadingState', false);
-						this.set('totalNum', data.get('length'));
+						// this.set('totalNum', data.get('length'));
 						this.set('total', data);
+						return null;
+					}).then(() => {
+						req = this.get('pmController').get('Store').createModel('request', {
+							id: 'findDataLength',
+							res: 'bind_teacher_student_time_paper',
+							fmcond: this.get('pmController').get('Store').createModel('fmcond', {
+								id: 'countData2',
+								skip: 0,
+								take: 1000
+							}),
+							gtecond: A([
+								this.get('pmController').get('Store').createModel('gtecond', {
+									id: 'daterangestart',
+									key: 'time',
+									val: dateRange.start
+								})
+							]),
+							ltecond: A([
+								this.get('pmController').get('Store').createModel('ltecond', {
+									id: 'daterangeend',
+									key: 'time',
+									val: dateRange.end
+								})
+							])
+						});
+
+						req.get('eqcond').pushObject(this.get('pmController').get('Store').createModel('eqcond', {
+							id: 'countData1',
+							key: 'teacher_id',
+							val: 'teacherone'
+						}));
+						conditions = this.get('pmController').get('Store').object2JsonApi(req);
+						return this.get('pmController').get('Store').queryObject('/api/v1/findBindTeacherStudentTimePaperCount/0', 'bind_teacher_student_time_paper', conditions);
+					})
+					.then(data => {
+						this.set('totalNum', data.get('count'));
 					});
 			} else {
 				this.set('loadingState', false);
@@ -151,8 +187,6 @@ export default Controller.extend({
 			instance.then(func => {
 				func();
 				this.set('hint', hint);
-
-				this.get('logger').log('will output stus data');
 			});
 
 		},
@@ -160,7 +194,6 @@ export default Controller.extend({
 			let hint = null,
 				date = this.get('currentDate'),
 				currentDate = date === '全部' ? '全部' : dateFormat(date, 'yyyy/MM/dd');
-
 
 			hint = {
 				hintModal: true,
